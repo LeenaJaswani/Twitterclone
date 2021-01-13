@@ -1,0 +1,3 @@
+db.sqlite3
+twitterclone/settings/local.py
+twitterclone/settings/base.py
