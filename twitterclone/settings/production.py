@@ -137,12 +137,12 @@ import dj_database_url
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static-serve')
 django_heroku.settings(locals())
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static-serve'),
 )
 
 # Simplified static file serving.
