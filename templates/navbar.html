@@ -1,33 +1,29 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
    <a class="navbar-brand" href="{% url 'home' %}">TweetMe</a>
-   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-       <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-      <li class="nav-item active">
+    <li class="nav-item active">  <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+ 
        {% if request.user.is_authenticated %}
 
- <li class="nav-item dropdown">
-        <a class="nav-link" aria-haspopup="true" aria-expanded="true">
+ <li class="nav-item">
+        <a class="nav-link" aria-haspopup="true" aria-expanded="false">
         Account
         </a>
       </li>
 
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-         
-          <div class="dropdown-divider"></div>
-         
-        </div>
-     <li class="nav-item dropdown">
-        <a class="nav-link" href="{{ request.user.profile.get_absolute_url }}" aria-haspopup="true" aria-expanded="true">Profile</a>
+     
+     <li class="nav-item">
+        <a class="nav-link" href="{{ request.user.profile.get_absolute_url }}" aria-haspopup="true" aria-expanded="false">Profile</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item">
          {% include "tweets/search_form.html" %}</li>
        </ul>
     
@@ -48,6 +44,18 @@
  
   </div>
 </nav>
+
+ 
+
+ 
+   
+     
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+   
+  </div>
 <!--  <nav class="navbar navbar-default">
   <div class="container-fluid">
    Brand and toggle get grouped for better mobile display
