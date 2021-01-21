@@ -2,4 +2,4 @@
 /twitterclone/settings/.local.py
 /twitterclone/settings/.base.py
 /.env
-/twitterclone/.__pycache__
+/twitterclone/__pycache__/.*
