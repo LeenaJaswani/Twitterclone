@@ -1,4 +1,5 @@
-db.sqlite3
-/twitterclone/settings/local.py
-/twitterclone/settings/base.py
+/.db.sqlite3
+/twitterclone/settings/.local.py
+/twitterclone/settings/.base.py
 /.env
+/twitterclone/.__pycache__
